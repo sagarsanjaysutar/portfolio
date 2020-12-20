@@ -1,8 +1,20 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from "vue";
+import "jquery";
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import AOS from "aos";
 
-Vue.config.productionTip = false
+import App from "./App.vue";
+
+Vue.config.productionTip = false;
+
+
+
+
+
+
+AOS.init();
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  render: (h) => h(App),
+}).$mount("#app");

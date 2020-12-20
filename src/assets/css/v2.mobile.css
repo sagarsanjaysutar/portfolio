@@ -1,0 +1,109 @@
+.section-heading {
+  font-size: 50px;
+}
+
+.skill-icon {
+  max-width: 70%;
+}
+
+/*Section 1*/
+.s1 {
+  border-radius: 0px;
+  margin: 0px;
+  min-height: 100vh;
+  padding: 0px;
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.13), rgba(0, 0, 0, 0.5)),
+    url("../img/bg/bg-6-sm.webp");
+  background-size: cover;
+}
+
+.socials-icons {
+  font-size: 1em;
+}
+
+.navbar {
+  height: 10%;
+}
+
+.nav-item {
+  padding-left: 10px;
+  font-size: 1.25em;
+}
+
+.resume {
+  padding-left: 10px;
+}
+
+.skill {
+  font-size: 1.4em;
+}
+
+.name {
+  font-size: 4em;
+}
+
+.intro-container {
+  transform: translate(0%, 12%);
+}
+
+/*Section 2*/
+
+.work_img {
+  width: 35rem;
+  height: 25rem;
+  filter: grayscale(1%);
+
+  z-index: -1;
+}
+
+.work-card {
+  width: 35rem;
+  height: 25rem;
+  background-color: transparent;
+
+  margin: 10px;
+
+  text-align: left;
+}
+
+.work-img1 {
+  height: 300px;
+  width: 600px;
+}
+
+.custom-card-title {
+  font-size: 1.2em;
+}
+
+.carousel-row,
+.work-container {
+  padding: 0px;
+}
+
+/*Section 3*/
+.s3 {
+  /* background: linear-gradient(to top, rgb(15, 39, 27) 0%, rgba(1, 23, 26, 1) 93%, rgb(0, 0, 0) 100%); */
+  /* background-color: whitesmoke; */
+  min-height: 100vh;
+  background-image: url("../img/bg/bg-6-sm.jpg");
+  background-size: cover;
+}
+
+.description {
+  padding: 1em;
+}
+
+.description-text {
+  padding-top: 1rem;
+  font-size: 1.25em;
+}
+
+.self {
+  width: 18rem;
+  height: 20rem;
+}
+
+/*Section 4*/
+.contact-text {
+  font-size: 2.5em;
+}

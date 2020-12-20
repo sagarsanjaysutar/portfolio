@@ -1,0 +1,61 @@
+/*Section 1*/
+.nav-centered{
+    display: block;
+    
+}
+.nav-item {
+    padding-left: 10px;
+    font-size: 1.25em;
+}
+
+.resume {
+    padding-left: 10px;
+
+}
+.skill{
+   
+    font-size: 1.4em;
+}
+.name{
+    font-size:4em;
+}
+ .intro-container{
+    
+    transform: translate(0%,12%);
+}
+
+
+/*Section 2*/
+.s2 .card {
+    width:19rem;
+    height: 28rem;
+}
+.work-img1 {
+    height: 300px;
+    width: 600px;
+
+}
+
+.carousel-row, .work-container{
+    padding: 0px;
+}
+
+
+/*Section 3*/
+.description{
+    padding: 1em;;
+}
+.description-text{
+    padding-top:1rem;
+    font-size:1.25em;
+}
+.self{
+    
+    width: 18rem;
+   height: 20rem;
+}
+
+/*Section 4*/
+.contact-text{
+    font-size:2.5em;
+}
