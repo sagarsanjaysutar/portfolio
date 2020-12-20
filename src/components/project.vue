@@ -4,9 +4,9 @@
       <div class="col-12 section-heading">My Work</div>
     </div>
     <div class="row">
-      <div class="col-12 col-lg-4" v-for="project in projects" :key="project.key">
+      <div class="col-12 col-lg-4" v-for="project in projects" :key="project.id">
         <div class="project-card">
-          <div class="project-img lazy " v-bind:style="{ 'background-image': 'url(' + project.coverImage + ')' }">
+          <div class="project-img lazy " :style="{ backgroundImage: `url(${project.coverImage})` }">
             <div class="project-content">
               <h4 class="project-name h4">{{ project.name }}</h4>
               <h5 class="project-desc h5">{{ project.desc }}</h5>
@@ -32,17 +32,17 @@ export default {
           link: "",
           type: "Web app",
           techUsed: ["MEVN"],
-          coverImage: "'../assets/img/Work/Library/Library 2.png'",
+          coverImage: "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/Work/Library/Library%202.png",
           previewImages: [],
         },
         {
           id: "p2",
-          name: "Parking ",
+          name: "Parking",
           desc: "A Parking Web App with a web app and physical vehicle detecting module.",
           link: "",
           type: "Web app",
           techUsed: ["Python", "MEVN"],
-          coverImage: "'../assets/img/Work/Parking/Parking 1.webp'",
+          coverImage: "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/Work/Parking/Parking%202.webp",
           previewImages: [],
         },
         {
@@ -52,7 +52,7 @@ export default {
           link: "",
           type: "Android app",
           techUsed: ["Android"],
-          coverImage: "'../assets/img/Work/Droid Stack/app 1.jpg'",
+          coverImage: "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/Work/Droid%20Stack/app%201.jpg",
           previewImages: [],
         },
       ],
