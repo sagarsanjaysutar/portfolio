@@ -49,8 +49,7 @@ export default {
           name: "Web Development",
           desc:
             "Worked on the MEVN stack i.e Mongo, Express, Vue and Node JS along side with Vuetify & Bootstrap.",
-          background:
-            "https://res-1.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco/irl2h5tkcuqvrv12n2dt",
+          background: "../assets/img/bg/random.webp",
           icons: [
             {
               name: "Vuetify",
@@ -110,7 +109,7 @@ export default {
   height: 15rem;
   background-repeat: no-repeat;
   background-position: right;
-  background-size: 100px;
+  background-size: 80px;
   border: 1px solid white;
   margin-bottom: 2rem;
   display: flex;

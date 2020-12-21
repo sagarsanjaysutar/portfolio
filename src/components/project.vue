@@ -19,7 +19,7 @@
           <h6 class="card-text h6 project-desc">{{ project.type }} • {{ project.techUsed }}</h6>
           {{ project.desc }}
           <div class="card-action mt-3">
-            <b-button variant="light" @click="hideModal">View code</b-button>
+            <b-button variant="light">View code</b-button>
           </div>
         </div>
       </div>
