@@ -3,6 +3,7 @@
     <Navbar />
     <Landing />
     <Projects />
+    <Skills />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import Navbar from "./components/navbar";
 import Landing from "./components/landing";
 import Projects from "./components/project";
+import Skills from "./components/skills";
 
 export default {
   name: "App",
@@ -17,6 +19,7 @@ export default {
     Navbar,
     Landing,
     Projects,
+    Skills,
   },
 };
 </script>

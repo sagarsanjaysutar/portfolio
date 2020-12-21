@@ -1,0 +1,144 @@
+<template>
+  <div class="container">
+    <div class="row" data-aos="fade-up" data-aos-duration="1000">
+      <div class="col-12 section-heading">Skills</div>
+    </div>
+    <div class="row justify-content-center">
+      <div
+        class="col-12 col-lg-6"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        v-for="(skill, index) in skills"
+        :key="index"
+      >
+        <div
+          class="card bg-transparent skill-card"
+          :style="{ backgroundImage: 'url(' + skill.background + ')' }"
+        >
+          <div class="card-body">
+            <h4 class="card-title">{{ skill.name }}</h4>
+            <div class="card-subtitle">
+              {{ skill.desc }}
+            </div>
+            <div class="card-actions">
+              <div
+                class="social"
+                data-toggle="tooltip"
+                data-placement="top"
+                v-for="(icon, index) in skill.icons"
+                :key="index"
+                :title="icon.name"
+              >
+                <img class="img-fluid lazy" :src="icon.logoUrl" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "skills",
+  data: () => {
+    return {
+      skills: [
+        {
+          name: "Web Development",
+          desc:
+            "Worked on the MEVN stack i.e Mongo, Express, Vue and Node JS along side with Vuetify & Bootstrap.",
+          background:
+            "https://res-1.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco/irl2h5tkcuqvrv12n2dt",
+          icons: [
+            {
+              name: "Vuetify",
+              logoUrl: "https://cdn.vuetifyjs.com/images/logos/logo.svg",
+            },
+            {
+              name: "Bootstrap",
+              logoUrl: "https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon-32x32.png",
+            },
+            {
+              name: "Mongo DB",
+              logoUrl: "https://www.mongodb.com/assets/images/global/favicon.ico",
+            },
+
+            {
+              name: "Node JS",
+              logoUrl: "https://nodejs.org/static/images/logo.svg",
+            },
+          ],
+        },
+        {
+          name: "Mobile Development",
+          desc: "Spent good amount of time on android and made couple of apps too.",
+          background: "https://ionicframework.com/img/getting-started/ionic-native-card.png",
+          icons: [
+            {
+              name: "Android",
+              logoUrl: "https://www.android.com/static/images/fav/favicon.ico",
+            },
+          ],
+        },
+        {
+          name: "Competetive Programming",
+          desc:
+            "Always have loved to do competetive Programming on platforms like Hacker Rank and Project euler.\
+            I also have won couple of competitions too. ",
+          background: "https://ionicframework.com/img/getting-started/theming-card.png",
+          icons: [
+            {
+              name: "Project Euler",
+              logoUrl: "https://projecteuler.net/favicon.ico",
+            },
+            {
+              name: "Hacker Rank",
+              logoUrl: "https://hrcdn.net/community-frontend/assets/favicon-ddc852f75a.png",
+            },
+          ],
+        },
+      ],
+    };
+  },
+};
+</script>
+
+<style>
+.skill-card {
+  height: 15rem;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 100px;
+  border: 1px solid white;
+  margin-bottom: 2rem;
+  display: flex;
+  position: relative;
+}
+
+.skill-card .card-body .card-actions {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+.social {
+  background-color: black;
+  margin-left: 10px;
+  border-radius: 50px;
+  border: 1px solid gray;
+  height: 3rem;
+  width: 3rem;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social img {
+  width: 50%;
+  height: 50%;
+}
+</style>
