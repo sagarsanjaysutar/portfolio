@@ -1,40 +1,13 @@
 .section-heading {
-  font-size: 2em;
+  font-size: 3em;
 }
-
-
 
 /*Section 1*/
 .nav-link:hover {
   border-bottom: 1px hidden white;
 }
-
-.s1 {
-  margin: 0px;
-  height: 100vh;
-  padding: 0px;
-  background-image: url("../img/bg/bg-mob.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.nav-centered {
-  display: block;
-  justify-content: start;
-  align-items: start;
-  align-content: flex-start;
-  align-self: flex-start;
-  text-align: start;
-}
-
-.version {
-  width: 100%;
-  display: block;
-  justify-content: start;
-  align-items: start;
-  align-content: flex-start;
-  align-self: flex-start;
-  text-align: start;
+.social-column {
+  display: none !important;
 }
 
 .nav-item {
@@ -60,22 +33,6 @@
   font-size: 1.4em;
 }
 
-/*Section 2*/
-.s2 .card {
-  width: 18rem;
-  height: 30rem;
-}
-
-.work-img1 {
-  height: 300px;
-  width: 600px;
-}
-
-.carousel-row,
-.work-container {
-  padding: 0px;
-}
-
 /*Section 3*/
 .description {
   padding: 1em;
@@ -91,17 +48,6 @@
   height: 20rem;
 }
 
-.skill-card-4 {
-  transform: scale(1);
-  background-color: var(--trans-secondary);
-}
-
-.skill-card .card-text {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
-  height: 80%;
-  font-size: 1em;
-}
-
 /*Section 4*/
 .contact-text {
   font-size: 2.5em;
@@ -113,10 +59,4 @@
 .linkedin,
 .email {
   max-width: 30%;
-}
-
-.s5 {
-  height: 5%;
-  padding: 1rem;
-  font-size: 0.8em;
 }

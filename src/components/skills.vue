@@ -11,10 +11,7 @@
         v-for="(skill, index) in skills"
         :key="index"
       >
-        <div
-          class="card bg-transparent skill-card"
-          :style="{ backgroundImage: 'url(' + skill.background + ')' }"
-        >
+        <div class="card  skill-card" :style="{ backgroundImage: 'url(' + skill.background + ')' }">
           <div class="card-body">
             <h4 class="card-title">{{ skill.name }}</h4>
             <div class="card-subtitle">
@@ -22,7 +19,7 @@
             </div>
             <div class="card-actions">
               <div
-                class="social"
+                class="skill-logo"
                 data-toggle="tooltip"
                 data-placement="top"
                 v-for="(icon, index) in skill.icons"
@@ -49,21 +46,22 @@ export default {
           name: "Web Development",
           desc:
             "Worked on the MEVN stack i.e Mongo, Express, Vue and Node JS along side with Vuetify & Bootstrap.",
-          background: "../assets/img/bg/random.webp",
+          background:
+            "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/bg/random.webp",
           icons: [
-            {
-              name: "Vuetify",
-              logoUrl: "https://cdn.vuetifyjs.com/images/logos/logo.svg",
-            },
-            {
-              name: "Bootstrap",
-              logoUrl: "https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon-32x32.png",
-            },
             {
               name: "Mongo DB",
               logoUrl: "https://www.mongodb.com/assets/images/global/favicon.ico",
             },
 
+            {
+              name: "Express",
+              logoUrl: "https://expressjs.com/images/favicon.png",
+            },
+            {
+              name: "Vue",
+              logoUrl: "https://vuejs.org/images/icons/apple-icon-57x57.png",
+            },
             {
               name: "Node JS",
               logoUrl: "https://nodejs.org/static/images/logo.svg",
@@ -109,8 +107,9 @@ export default {
   height: 15rem;
   background-repeat: no-repeat;
   background-position: right;
-  background-size: 80px;
+  background-size: 100px;
   border: 1px solid white;
+  background-color: #ffffff49;
   margin-bottom: 2rem;
   display: flex;
   position: relative;
@@ -121,10 +120,10 @@ export default {
   bottom: 1rem;
   left: 1rem;
   display: flex;
-  justify-content: start;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
-.social {
+.skill-logo {
   background-color: black;
   margin-left: 10px;
   border-radius: 50px;
@@ -136,7 +135,7 @@ export default {
   justify-content: center;
   align-items: center;
 }
-.social img {
+.skill-logo img {
   width: 50%;
   height: 50%;
 }

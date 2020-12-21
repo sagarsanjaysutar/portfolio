@@ -10,6 +10,7 @@ Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
 Vue.use(BootstrapVueIcons);
 
+
 AOS.init();
 
 new Vue({

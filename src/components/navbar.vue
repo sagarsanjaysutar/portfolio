@@ -1,9 +1,9 @@
 <template>
   <b-navbar toggleable="lg" type="dark" style="background-color:transparent;">
-    <b-navbar-brand href="#">&lt;/coder&gt;</b-navbar-brand>
+    <b-navbar-brand href="#">&lt;Dev&gt;</b-navbar-brand>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav>
-      <b-navbar-nav class="mx-auto">
+      <b-navbar-nav class="w-100 d-flex " style="justify-content:center;">
         <b-nav-item href="#">Home</b-nav-item>
         <b-nav-item href="#">Work</b-nav-item>
         <b-nav-item href="#">About</b-nav-item>
@@ -23,7 +23,27 @@
 <script>
 export default {
   name: "navbar",
+  // mounted() {
+  //   window.onscroll = function() {
+  //     document.querySelector(".navbar").classList.add("bg-light");
+  //     document.querySelector(".navbar").classList.add("navbar-dark");
+  //   };
+  // },
 };
 </script>
 
-<style></style>
+<style>
+.short-hr {
+  background-color: white;
+  width: 10%;
+}
+
+.typed-cursor {
+  opacity: 0;
+}
+
+.nav-item {
+  padding-left: 20px;
+  font-size: 1em;
+}
+</style>

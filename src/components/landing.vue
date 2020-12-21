@@ -2,20 +2,25 @@
   <div class="container intro-container">
     <div class="row w-100 h-100">
       <div
-        class="col-11 d-flex justify-content-center align-content-center"
-        style="flex-direction: column"
+        class="col-lg-11 col-12 d-flex justify-content-center align-content-center"
+        style="flex-direction: column;position: relative"
       >
         <span>
-          <h3 class="text-left name" data-aos="fade-left" data-aos-duration="1500">
-            Hi, I'm Sagar <br />
+          <h3 class="name" data-aos="fade-left" data-aos-duration="1500">
+            Hi, Sagar <br />this side! <br />
           </h3>
-          <span class="pre-text" style="color: green"> >>> </span
-          ><span class="pre-text mr-2">A</span>
-          <span class="skill" id="typed2" ref="skill"> </span>
+          <span class="pre-text" style="color: green"> >> </span>
+          <span class="skill">A full stack developer</span>
         </span>
+        <button
+          class="btn btn-outline-light"
+          style="position:absolute; bottom:100px; display:flex; align-self:center"
+        >
+          View work
+        </button>
       </div>
       <div
-        class="col-1 d-flex justify-content-center align-items-center"
+        class="col-lg-1 d-flex justify-content-center align-items-center social-column"
         style="flex-direction: column"
       >
         <button class="social mb-4" type="button" title="Linkedin">
@@ -48,10 +53,11 @@ export default {
     new Typed(this.$refs.skill, {
       strings: ["Web Developer", "Mobile Developer", "Programmer"],
       smartBackspace: true,
-      typeSpeed: 50,
+      typeSpeed: 100,
       backSpeed: 0,
       loop: false,
     });
+    document.querySelectorAll(".typed-cursor")[0].style.display = "none";
   },
 };
 </script>
@@ -62,18 +68,19 @@ export default {
   /* background-image: url("../assets/img/bg/bg-6.jpg");
   background-size: cover; */
 }
-.name {
-  font-size: 90px;
-  font-weight: 600;
-}
 
 .skill {
-  font-size: 60px;
+  font-size: 3rem;
   font-weight: 400;
   text-align: left;
 }
-
+.name {
+  font-size: 5rem;
+  font-weight: 600;
+  /* -webkit-text-stroke: 1px black;
+  -webkit-text-fill-color: white; */
+}
 .pre-text {
-  font-size: 60px;
+  font-size: 2.5rem;
 }
 </style>

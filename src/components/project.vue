@@ -1,17 +1,28 @@
 <template>
-  <div class="container project-container">
+  <div class="container project-container ">
     <div class="row" data-aos="fade-up" data-aos-duration="1000">
       <div class="col-12 section-heading">My Work</div>
     </div>
     <div class="row mb-5" v-for="(project, index) in projects" :key="project.id">
-      <div class="col-12 col-lg-6" :style="{ order: index % 2 === 0 ? '1' : '2' }">
+      <div
+        class="col-6 mb-5 "
+        :style="{ order: index % 2 === 0 ? '1' : '2' }"
+        v-if="!isMobile()"
+      >
+        <!---Ternary operator to diplay the project details alernatively  -->
         <b-carousel id="carousel-1" :interval="3000">
-          <b-carousel-slide v-for="image in project.previewImages" :key="image.id" :img-src="image">
+          <b-carousel-slide v-for="image in project.previewImages" :key="image.id">
+            <template #img>
+              <img class="img-fluid  project-images" :src="image" />
+            </template>
           </b-carousel-slide>
         </b-carousel>
       </div>
-
-      <div class="col-12 col-lg-6" :style="{ order: index % 2 !== 0 ? '1' : '2' }">
+      <div
+        class="col-6 "
+        :style="{ order: index % 2 !== 0 ? '1' : '2' }"
+        v-if="!isMobile()"
+      >
         <div class="card project-details">
           <h5 class="card-title project-name">
             {{ project.name }}
@@ -23,6 +34,27 @@
           </div>
         </div>
       </div>
+
+      <span v-else>
+        <div class="col-12">
+          <div class="project-mobile-card">
+            <b-carousel id="carousel-1 " :interval="3000">
+              <b-carousel-slide v-for="image in project.previewImages" :key="image.id">
+                <template #img>
+                  <img class="project-mobile-img" :src="image" />
+                </template>
+              </b-carousel-slide>
+            </b-carousel>
+            <div class="project-mobile-content">
+              <h4 class="project-mobile-name h4">{{ project.name }}</h4>
+              <h5 class="project-mobile-desc h5">{{ project.desc }}</h5>
+              <p class="btn btn-sm btn-outline-light mt-3">
+                View project <i class="ml-1 fas fa-arrow-right"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </span>
     </div>
   </div>
 </template>
@@ -80,31 +112,77 @@ export default {
       ],
     };
   },
+  methods: {
+    isMobile() {
+      if (
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+  },
 };
 </script>
 
 <style>
-.project-container {
-  width: 100%;
-  /* background: linear-gradient(to bottom, var(--trans-primary) 0%, var(--dark) 93%, rgb(0, 0, 0) 100%); */
-}
-
-/* Modal */
+/* Desktop card */
 .project-details {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
   background-color: #282828;
   border: 0px;
+}
+
+.project-images {
+  filter: grayscale(20%);
+  border-radius: 0.8rem;
 }
 
 .project-name {
   font-weight: 600;
 }
 .project-desc {
+  color: #ffffffbd;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+
+/* Mobile card */
+.project-mobile-card {
+  width: 20rem;
+  height: 25rem;
+  background-color: black;
+  overflow-x: hidden;
+  position: relative;
+}
+.project-mobile-img {
+  height: 25rem;
+
+  background-size: contain;
+}
+.project-mobile-content {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px -200px 100px rgb(0, 0, 0, 0.85) inset;
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  left: 0rem;
+  bottom: 0rem;
+  padding: 1rem;
+}
+.project-mobile-name {
+  font-weight: 600;
+}
+.project-mobile-desc {
   color: #ffffffbd;
   font-size: 0.9rem;
   line-height: 1.2;
