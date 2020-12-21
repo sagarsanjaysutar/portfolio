@@ -10,10 +10,9 @@
   "dependencies": {
     "animatescroll.js": "^1.0.7",
     "aos": "^2.3.4",
-    "bootstrap": "^4.4.1",
+    "bootstrap-vue": "^2.21.1",
     "core-js": "^3.6.5",
-    "jquery": "^3.4.1",
-    "": "^2.3.4",
+    "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
     "typed.js": "^2.0.11",
     "vue": "^2.6.11"
