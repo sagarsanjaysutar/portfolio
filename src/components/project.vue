@@ -1,61 +1,61 @@
 <template>
-  <div class="container project-container ">
-    <div class="row" data-aos="fade-up" data-aos-duration="1000">
-      <div class="col-12 section-heading">My Work</div>
-    </div>
-    <div class="row mb-5" v-for="(project, index) in projects" :key="project.id">
-      <div
-        class="col-6 mb-5 "
-        :style="{ order: index % 2 === 0 ? '1' : '2' }"
-        v-if="!isMobile()"
-      >
-        <!---Ternary operator to diplay the project details alernatively  -->
-        <b-carousel id="carousel-1" :interval="3000">
-          <b-carousel-slide v-for="image in project.previewImages" :key="image.id">
-            <template #img>
-              <img class="img-fluid  project-images" :src="image" />
-            </template>
-          </b-carousel-slide>
-        </b-carousel>
+  <div class="project-container">
+    <div class="container " style="z-index:2 !important; position: relative">
+      <div class="row " data-aos="fade-up" data-aos-duration="1000">
+        <div class="col-12 section-heading">My Work</div>
       </div>
       <div
-        class="col-6 "
-        :style="{ order: index % 2 !== 0 ? '1' : '2' }"
-        v-if="!isMobile()"
+        class="row mb-5 d-flex justify-content-center "
+        v-for="(project, index) in projects"
+        :key="project.id"
       >
-        <div class="card project-details">
-          <h5 class="card-title project-name">
-            {{ project.name }}
-          </h5>
-          <h6 class="card-text h6 project-desc">{{ project.type }} • {{ project.techUsed }}</h6>
-          {{ project.desc }}
-          <div class="card-action mt-3">
-            <b-button variant="light">View code</b-button>
-          </div>
+        <div class="col-6 mb-5 " :style="{ order: index % 2 === 0 ? '1' : '2' }" v-if="!isMobile()">
+          <!---Ternary operator to diplay the project details alernatively  -->
+          <b-carousel id="carousel-1" :interval="3000">
+            <b-carousel-slide v-for="image in project.previewImages" :key="image.id">
+              <template #img>
+                <img class="img-fluid  project-images" :src="image" />
+              </template>
+            </b-carousel-slide>
+          </b-carousel>
         </div>
-      </div>
+        <div class="col-4 " :style="{ order: index % 2 !== 0 ? '1' : '2' }" v-if="!isMobile()">
+          <div class="card project-details">
+            <h5 class="card-title project-name">
+              {{ project.name }}
+            </h5>
+            <h6 class="card-text h6 project-desc ">{{ project.type }} • {{ project.techUsed }}</h6>
+            <p class="word-wrap">{{ project.desc }}</p>
 
-      <span v-else>
-        <div class="col-12">
-          <div class="project-mobile-card">
-            <b-carousel id="carousel-1 " :interval="3000">
-              <b-carousel-slide v-for="image in project.previewImages" :key="image.id">
-                <template #img>
-                  <img class="project-mobile-img" :src="image" />
-                </template>
-              </b-carousel-slide>
-            </b-carousel>
-            <div class="project-mobile-content">
-              <h4 class="project-mobile-name h4">{{ project.name }}</h4>
-              <h5 class="project-mobile-desc h5">{{ project.desc }}</h5>
-              <p class="btn btn-sm btn-outline-light mt-3">
-                View project <i class="ml-1 fas fa-arrow-right"></i>
-              </p>
+            <div class="card-action mt-3">
+              <b-button variant="light">View code</b-button>
             </div>
           </div>
         </div>
-      </span>
+
+        <span v-else>
+          <div class="col-12">
+            <div class="project-mobile-card">
+              <b-carousel id="carousel-1 " :interval="3000">
+                <b-carousel-slide v-for="image in project.previewImages" :key="image.id">
+                  <template #img>
+                    <img class="project-mobile-img" :src="image" />
+                  </template>
+                </b-carousel-slide>
+              </b-carousel>
+              <div class="project-mobile-content">
+                <h4 class="project-mobile-name h4">{{ project.name }}</h4>
+                <h5 class="project-mobile-desc h5">{{ project.desc }}</h5>
+                <p class="btn btn-sm btn-outline-light mt-3">
+                  View project <i class="ml-1 fas fa-arrow-right"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </span>
+      </div>
     </div>
+    <span class="project-background-text">WORK </span>
   </div>
 </template>
 
@@ -127,14 +127,33 @@ export default {
 </script>
 
 <style>
+.project-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.project-background-text {
+  writing-mode: vertical-rl;
+  position: absolute;
+  text-align: left;
+  top: 10rem;
+  left: 1rem;
+  font-size: 12rem;
+  font-weight: 600;
+  -webkit-text-stroke: 1px white;
+  -webkit-text-fill-color: transparent;
+  z-index: 1 !important;
+}
+
 /* Desktop card */
 .project-details {
+  max-width: 18rem;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #282828;
+  background-color: transparent;
   border: 0px;
 }
 

@@ -1,38 +1,44 @@
 <template>
-  <div class="container">
-    <div class="row" data-aos="fade-up" data-aos-duration="1000">
-      <div class="col-12 section-heading">Skills</div>
-    </div>
-    <div class="row justify-content-center">
-      <div
-        class="col-12 col-lg-6"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        v-for="(skill, index) in skills"
-        :key="index"
-      >
-        <div class="card  skill-card" :style="{ backgroundImage: 'url(' + skill.background + ')' }">
-          <div class="card-body">
-            <h4 class="card-title">{{ skill.name }}</h4>
-            <div class="card-subtitle">
-              {{ skill.desc }}
-            </div>
-            <div class="card-actions">
-              <div
-                class="skill-logo"
-                data-toggle="tooltip"
-                data-placement="top"
-                v-for="(icon, index) in skill.icons"
-                :key="index"
-                :title="icon.name"
-              >
-                <img class="img-fluid lazy" :src="icon.logoUrl" />
+  <div class="skill-container">
+    <div class="container" style="z-index:2 !important; position: relative">
+      <div class="row" data-aos="fade-up" data-aos-duration="1000">
+        <div class="col-12 section-heading">Skills</div>
+      </div>
+      <div class="row justify-content-center">
+        <div
+          class="col-12 col-lg-6"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          v-for="(skill, index) in skills"
+          :key="index"
+        >
+          <div
+            class="card skill-card"
+            :style="{ backgroundImage: 'url(' + skill.background + ')' }"
+          >
+            <div class="card-body">
+              <h4 class="card-title">{{ skill.name }}</h4>
+              <div class="card-subtitle ">
+                {{ skill.desc }}
+              </div>
+              <div class="card-actions">
+                <div
+                  class="skill-logo"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  v-for="(icon, index) in skill.icons"
+                  :key="index"
+                  :title="icon.name"
+                >
+                  <img class="img-fluid lazy" :src="icon.logoUrl" />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <span class="skill-background-text">SKILLS</span>
   </div>
 </template>
 
@@ -103,16 +109,43 @@ export default {
 </script>
 
 <style>
+.skill-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.skill-background-text {
+  writing-mode: vertical-rl;
+  text-orientation: sideways-right;
+  position: absolute;
+  text-align: right;
+  height: 100%;
+  width: 100%;
+  top: 0rem;
+  right: 1rem;
+  font-size: 12rem;
+  font-weight: 600;
+  -webkit-text-stroke: 1px white;
+  -webkit-text-fill-color: transparent;
+  z-index: 1 !important;
+}
+
 .skill-card {
   height: 15rem;
   background-repeat: no-repeat;
   background-position: right;
   background-size: 100px;
   border: 1px solid white;
-  background-color: #ffffff49;
+  /* background-color: #ffffff49; Semi transparent */
+  background-color: rgba(255, 255, 255, 0.952);
+  color: #282828;
   margin-bottom: 2rem;
   display: flex;
   position: relative;
+}
+
+.skill-card .card-subtitle {
+  max-width: 25rem;
 }
 
 .skill-card .card-body .card-actions {

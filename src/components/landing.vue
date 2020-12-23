@@ -2,7 +2,7 @@
   <div class="container intro-container">
     <div class="row w-100 h-100">
       <div
-        class="col-lg-11 col-12 d-flex justify-content-center align-content-center"
+        class="col-lg-6 col-12 d-flex justify-content-center align-content-center"
         style="flex-direction: column;position: relative"
       >
         <span>
@@ -19,7 +19,10 @@
           View work
         </button>
       </div>
-      <div
+      <div class="col-6 d-flex justify-content-center align-items-center">
+        <img src="../assets/img/Sagar-Yellow.png" class="img-fluid intro-self" />
+      </div>
+      <!-- <div
         class="col-lg-1 d-flex justify-content-center align-items-center social-column"
         style="flex-direction: column"
       >
@@ -39,7 +42,7 @@
             ><i class="fab fa-instagram fa-lg"></i
           ></a>
         </button>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -65,12 +68,17 @@ export default {
 <style>
 .intro-container {
   height: 100vh;
-  /* background-image: url("../assets/img/bg/bg-6.jpg");
-  background-size: cover; */
+  /* background-image: url("../assets/img/Sagar-Dark-Portrait.png");
+  background-size: cover;
+  background-position: right; */
+}
+
+.intro-self {
+  border-radius: 50%;
 }
 
 .skill {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 400;
   text-align: left;
 }
