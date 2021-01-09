@@ -1,5 +1,5 @@
 <template>
-  <div class="project-container ">
+  <div class="project-container" id="work">
     <div class="container " style="z-index:2 !important; position: relative">
       <div class="row " data-aos="fade-up" data-aos-duration="1000">
         <div class="col-12 section-heading">My Work</div>

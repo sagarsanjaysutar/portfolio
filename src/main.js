@@ -5,8 +5,10 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import AOS from "aos";
 import App from "./App.vue";
+import VueAnimate from "vue-animate-scroll";
 
 Vue.config.productionTip = false;
+Vue.use(VueAnimate);
 Vue.use(BootstrapVue);
 Vue.use(BootstrapVueIcons);
 Vue.mixin({

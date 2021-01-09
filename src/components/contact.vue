@@ -1,12 +1,11 @@
 <template>
   <span>
-    <div class="container contact-container">
+    <div class="container contact-container " id="contact">
       <div class="row">
         <div class="col-12">
           <div class="section-heading " data-aos="fade-up" data-aos-duration="500">
             Get in touch
           </div>
-          <div class="section-subtitle" data-aos="fade-up" data-aos-duration="500"></div>
         </div>
       </div>
 
@@ -33,7 +32,7 @@
         </div>
       </div>
     </div>
-    <div class="container bg-dark p-3 d-flex justify-content-center align-items-center align-content-center h-100">
+    <div class="container-fluid p-3" style="background-color:#282828;">
       <div class="row w-100">
         <div class="col-12 text-center">
           <span class="mr-lg-5">
@@ -54,6 +53,6 @@ export default {
 
 <style>
 .contact-container {
-  height: 40vh;
+  height: 50vh;
 }
 </style>

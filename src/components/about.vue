@@ -1,5 +1,5 @@
 <template>
-  <div class="about-container">
+  <div class="about-container" id="about">
     <div class="container">
       <div class="row" data-aos="fade-up" data-aos-duration="1000">
         <div class="col-12 section-heading">Few words about me</div>
@@ -65,7 +65,7 @@ export default {
 }
 
 .about-image {
-  background-image: url("../assets/img/Sagar5.jpg");
+  background-image: url("../assets/img/Sagar7.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;

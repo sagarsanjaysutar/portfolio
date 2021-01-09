@@ -7,7 +7,7 @@
     <Skills />
     <Contact />
 
-    <span v-if="5 === 0"> </span>
+   
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="intro-container ">
+  <div class="intro-container " id="home">
     <div class="container h-100">
       <div class="row h-100" style="z-index:2 !important; position: relative">
         <div class="col-lg-6 col-12 intro-row-desc  ">
@@ -44,7 +44,7 @@ export default {
 }
 
 .intro-self {
-  background-image: url("../assets/img/Sagar4.jpg");
+  background-image: url("../assets/img/Sagar6.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

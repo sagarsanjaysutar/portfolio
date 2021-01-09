@@ -1,5 +1,5 @@
 .section-heading {
-  font-size: 3em;
+  font-size: 2.5em;
 }
 
 /*Section 1*/
@@ -27,29 +27,6 @@
   font-size: 1.4em;
 }
 
-/*Section 3*/
-.description {
-  padding: 1em;
-}
-
-.description-text {
-  padding-top: 1rem;
-  font-size: 1.25em;
-}
-
-.self {
-  width: 18rem;
-  height: 20rem;
-}
-
-/*Section 4*/
-.contact-text {
-  font-size: 2.5em;
-}
-
-/* .contact-container {
-    max-width: 59%;
-} */
 .linkedin,
 .email {
   max-width: 30%;
