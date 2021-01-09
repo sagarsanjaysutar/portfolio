@@ -3,8 +3,11 @@
     <Navbar />
     <Landing />
     <Projects />
+    <About />
     <Skills />
     <Contact />
+
+    <span v-if="5 === 0"> </span>
   </div>
 </template>
 
@@ -12,6 +15,7 @@
 import Navbar from "./components/navbar";
 import Landing from "./components/landing";
 import Projects from "./components/project";
+import About from "./components/about";
 import Skills from "./components/skills";
 import Contact from "./components/contact";
 
@@ -21,6 +25,7 @@ export default {
     Navbar,
     Landing,
     Projects,
+    About,
     Skills,
     Contact,
   },

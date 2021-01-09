@@ -2,34 +2,18 @@
   <div class="skill-container">
     <div class="container" style="z-index:2 !important; position: relative">
       <div class="row" data-aos="fade-up" data-aos-duration="1000">
-        <div class="col-12 section-heading">Skills</div>
+        <div class="col-12 section-heading">Profound domains</div>
       </div>
       <div class="row justify-content-center">
-        <div
-          class="col-12 col-lg-6"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          v-for="(skill, index) in skills"
-          :key="index"
-        >
-          <div
-            class="card skill-card"
-            :style="{ backgroundImage: 'url(' + skill.background + ')' }"
-          >
+        <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-duration="1000" v-for="(skill, index) in skills" :key="index">
+          <div class="card skill-card" :style="{ backgroundImage: 'url(' + skill.background + ')' }">
             <div class="card-body">
               <h4 class="card-title">{{ skill.name }}</h4>
               <div class="card-subtitle ">
                 {{ skill.desc }}
               </div>
               <div class="card-actions">
-                <div
-                  class="skill-logo"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  v-for="(icon, index) in skill.icons"
-                  :key="index"
-                  :title="icon.name"
-                >
+                <div class="skill-logo" data-toggle="tooltip" data-placement="top" v-for="(icon, index) in skill.icons" :key="index" :title="icon.name">
                   <img class="img-fluid lazy" :src="icon.logoUrl" />
                 </div>
               </div>
@@ -38,7 +22,7 @@
         </div>
       </div>
     </div>
-    <span class="skill-background-text">SKILLS</span>
+    <span v-if="!isMobile()" class="skill-background-text">SKILLS</span>
   </div>
 </template>
 
@@ -50,10 +34,8 @@ export default {
       skills: [
         {
           name: "Web Development",
-          desc:
-            "Worked on the MEVN stack i.e Mongo, Express, Vue and Node JS along side with Vuetify & Bootstrap.",
-          background:
-            "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/bg/random.webp",
+          desc: "I've worked on mutiple project based on the MEVN stack i.e Mongo, Express, Vue and Node JS along side with Vuetify & Bootstrap.",
+          background: "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/bg/random.webp",
           icons: [
             {
               name: "Mongo DB",
@@ -76,7 +58,7 @@ export default {
         },
         {
           name: "Mobile Development",
-          desc: "Spent good amount of time on android and made couple of apps too.",
+          desc: "I've also spent good amount of time on android and made couple of apps too.",
           background: "https://ionicframework.com/img/getting-started/ionic-native-card.png",
           icons: [
             {
@@ -87,9 +69,8 @@ export default {
         },
         {
           name: "Competetive Programming",
-          desc:
-            "Always have loved to do competetive Programming on platforms like Hacker Rank and Project euler.\
-            I also have won couple of competitions too. ",
+          desc: "Competetive Programming has always intrigued me and I've tried my very best on Hacker Rank and Project euler.\
+            I've also won couple of competitions in college too.",
           background: "https://ionicframework.com/img/getting-started/theming-card.png",
           icons: [
             {
@@ -125,23 +106,20 @@ export default {
   right: 1rem;
   font-size: 12rem;
   font-weight: 600;
-  -webkit-text-stroke: 1px white;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.349);
   -webkit-text-fill-color: transparent;
   z-index: 1 !important;
 }
 
 .skill-card {
-  height: 15rem;
+  min-height: 18rem;
   background-repeat: no-repeat;
   background-position: right;
   background-size: 100px;
-  border: 1px solid white;
-  /* background-color: #ffffff49; Semi transparent */
-  background-color: rgba(255, 255, 255, 0.952);
-  color: #282828;
   margin-bottom: 2rem;
   display: flex;
   position: relative;
+  background-color: #383838;
 }
 
 .skill-card .card-subtitle {

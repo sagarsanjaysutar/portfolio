@@ -1,14 +1,10 @@
 <template>
-  <div class="project-container">
+  <div class="project-container ">
     <div class="container " style="z-index:2 !important; position: relative">
       <div class="row " data-aos="fade-up" data-aos-duration="1000">
         <div class="col-12 section-heading">My Work</div>
       </div>
-      <div
-        class="row mb-5 d-flex justify-content-center "
-        v-for="(project, index) in projects"
-        :key="project.id"
-      >
+      <div class="row mb-5 d-flex justify-content-center " v-for="(project, index) in projects" :key="project.id">
         <div class="col-6 mb-5 " :style="{ order: index % 2 === 0 ? '1' : '2' }" v-if="!isMobile()">
           <!---Ternary operator to diplay the project details alernatively  -->
           <b-carousel id="carousel-1" :interval="3000">
@@ -46,16 +42,14 @@
               <div class="project-mobile-content">
                 <h4 class="project-mobile-name h4">{{ project.name }}</h4>
                 <h5 class="project-mobile-desc h5">{{ project.desc }}</h5>
-                <p class="btn btn-sm btn-outline-light mt-3">
-                  View project <i class="ml-1 fas fa-arrow-right"></i>
-                </p>
+                <p class="btn btn-sm btn-outline-light mt-3">View project <i class="ml-1 fas fa-arrow-right"></i></p>
               </div>
             </div>
           </div>
         </span>
       </div>
     </div>
-    <span class="project-background-text">WORK </span>
+    <span v-if="!isMobile()" class="project-background-text">WORK </span>
   </div>
 </template>
 
@@ -72,8 +66,7 @@ export default {
           link: "https://github.com/sagarsanjaysutar/library-vue",
           type: "Web app",
           techUsed: "MEVN",
-          coverImage:
-            "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/Work/Library/Library%202.png",
+          coverImage: "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/Work/Library/Library%202.png",
           previewImages: [
             "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/Work/Library/Library%201.png",
             "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/Work/Library/Library%202.png",
@@ -88,8 +81,7 @@ export default {
           link: "https://github.com/sagarsanjaysutar/SpotKar",
           type: "Web app",
           techUsed: "OpenCV",
-          coverImage:
-            "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/Work/Parking/Parking%202.webp",
+          coverImage: "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/Work/Parking/Parking%202.webp",
           previewImages: [
             "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/Work/Parking/Parking%201.webp",
             "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/Work/Parking/Parking%202.webp",
@@ -102,8 +94,7 @@ export default {
           link: "",
           type: "Android app",
           techUsed: "Android",
-          coverImage:
-            "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/Work/Droid%20Stack/app%201.jpg",
+          coverImage: "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/Work/Droid%20Stack/app%201.jpg",
           previewImages: [
             "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/Work/Droid%20Stack/Droid%201.png",
             "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/Work/Droid%20Stack/Droid%202.png",
@@ -111,17 +102,6 @@ export default {
         },
       ],
     };
-  },
-  methods: {
-    isMobile() {
-      if (
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
-      ) {
-        return true;
-      } else {
-        return false;
-      }
-    },
   },
 };
 </script>
@@ -140,7 +120,7 @@ export default {
   left: 1rem;
   font-size: 12rem;
   font-weight: 600;
-  -webkit-text-stroke: 1px white;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.349);
   -webkit-text-fill-color: transparent;
   z-index: 1 !important;
 }
@@ -193,7 +173,7 @@ export default {
 
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   left: 0rem;
   bottom: 0rem;
   padding: 1rem;

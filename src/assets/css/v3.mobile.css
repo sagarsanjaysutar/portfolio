@@ -15,12 +15,6 @@
   font-size: 1em;
 }
 
-.intro-container {
-  display: flex;
-  padding-left: 1rem;
-  align-items: center;
-}
-
 .name {
   font-size: 3.5em;
 }
