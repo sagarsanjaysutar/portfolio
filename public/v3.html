@@ -68,6 +68,7 @@
                   <a class="dropdown-item" href="v1.html">v1</a>
                   <a class="dropdown-item" href="v2.html">v2</a>
                   <a class="dropdown-item bg-secondary" href="v3.html">v3</a>
+                  <a class="dropdown-item" href="index.html">v4</a>
                 </ul>
               </div>
             </div>
@@ -554,7 +555,6 @@
         </div>
       </div>
     </div>
-    
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -568,12 +568,12 @@
 
     <script>
       AOS.init();
-      $(window).on("load", function () {
+      $(window).on("load", function() {
         $(".loader-wrapper").fadeOut("slow");
         $("img").removeClass("owl_lazy");
       });
 
-      $(function () {
+      $(function() {
         $(".lazy").lazy();
       });
 
@@ -586,8 +586,8 @@
       });
       document.querySelectorAll(".typed-cursor")[0].style.display = "none";
 
-      $(function () {
-        $("#email").click(function (event) {
+      $(function() {
+        $("#email").click(function(event) {
           var email = "sutarsagarsanjay@gmail.com";
           var subject = "Hey";
           var emailBody = " ";

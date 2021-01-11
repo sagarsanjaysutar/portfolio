@@ -27,3 +27,4 @@ firebase.json
 dist
 .firebaserc
 package-lock.json    
+.firebase
