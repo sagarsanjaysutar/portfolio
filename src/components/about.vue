@@ -58,6 +58,7 @@ export default {
   background-color: transparent;
   padding: 1rem;
   border-radius: 0;
+  color: #d3d3d3;
 }
 
 .bl {
@@ -65,10 +66,10 @@ export default {
 }
 
 .about-image {
-  background-image: url("../assets/img/Sagar7.png");
-  background-size: contain;
+  background-image: url("../assets/img/Sagar10.jpeg");
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: center;
   width: 35rem;
   height: 35rem;
 }

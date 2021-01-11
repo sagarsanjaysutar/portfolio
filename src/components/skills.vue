@@ -10,6 +10,7 @@
             <div class="card-body">
               <h4 class="card-title">{{ skill.name }}</h4>
               <div class="card-subtitle ">
+                <span class="ml-4"></span>
                 {{ skill.desc }}
               </div>
               <div class="card-actions">
@@ -34,7 +35,8 @@ export default {
       skills: [
         {
           name: "Web Development",
-          desc: "I've worked on mutiple project based on the MEVN stack i.e Mongo, Express, Vue and Node JS along side with Vuetify & Bootstrap.",
+          desc: "I've worked on mutiple project based on the MEVN stack i.e Mongo, Express, Vue and Node JS \
+          along side with Vuetify & Bootstrap. Infact this website is made using Vuejs.",
           background: "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/bg/random.webp",
           icons: [
             {

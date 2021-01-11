@@ -7,7 +7,7 @@
       <div class="row mb-5 d-flex justify-content-center " v-for="(project, index) in projects" :key="project.id">
         <div class="col-6 mb-5 " :style="{ order: index % 2 === 0 ? '1' : '2' }" v-if="!isMobile()">
           <!---Ternary operator to diplay the project details alernatively  -->
-          <b-carousel id="carousel-1" :interval="3000">
+          <b-carousel id="carousel-1" :interval="3000" fade>
             <b-carousel-slide v-for="image in project.previewImages" :key="image.id">
               <template #img>
                 <img class="img-fluid  project-images" :src="image" />

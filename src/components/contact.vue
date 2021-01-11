@@ -1,17 +1,17 @@
 <template>
-  <span>
-    <div class="container contact-container " id="contact">
+  <div class="contact-container" id="contact">
+    <div class="container">
       <div class="row">
         <div class="col-12">
-          <div class="section-heading " data-aos="fade-up" data-aos-duration="500">
+          <div class="section-heading" data-aos="fade-up" data-aos-duration="500">
             Get in touch
           </div>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-12">
-          <div class="w-100 d-flex justify-content-center">
+      <div class="row pt-3">
+        <div class="col-12 text-center">
+          <div class="d-flex justify-content-center align-items-center">
             <button class="social" type="button" title="Linkedin">
               <a href="https://www.linkedin.com/in/sagar-sutar-b3281a179/"><i class="fab fa-linkedin-in fa-lg"></i> </a>
             </button>
@@ -29,20 +29,13 @@
               <a href="https://www.instagram.com/notsagarsutar/"><i class="fab fa-instagram fa-lg"></i></a>
             </button>
           </div>
+          Made with <i class="far fa-heart"></i> by Sagar Sutar.
+          <br />
+          <small style="color:#d3d3d3; ">Powered by Vue js. Picture courtesy <a href="instagram.com/rikengothi/">Riken Gothi.</a></small>
         </div>
       </div>
     </div>
-    <div class="container-fluid p-3" style="background-color:#282828;">
-      <div class="row w-100">
-        <div class="col-12 text-center">
-          <span class="mr-lg-5">
-            Made with <i class="far fa-heart"></i> by
-            <a href="https:\\sagarsutar.in">Sagar Sutar.</a>
-          </span>
-        </div>
-      </div>
-    </div>
-  </span>
+  </div>
 </template>
 
 <script>
@@ -53,6 +46,6 @@ export default {
 
 <style>
 .contact-container {
-  height: 50vh;
+  height: 100%;
 }
 </style>

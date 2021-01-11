@@ -1,6 +1,6 @@
 <template>
   <div class="intro-container " id="home">
-    <div class="container h-100">
+    <div class="container-fluid h-100">
       <div class="row h-100" style="z-index:2 !important; position: relative">
         <div class="col-lg-6 col-12 intro-row-desc  ">
           <span>
@@ -9,8 +9,19 @@
             <span class="skill">A full stack developer</span>
           </span>
         </div>
-        <div class="col-lg-6 col-12 intro-row-img ">
+        <div class="col-lg-6 col-12 intro-row-img  ">
           <div class="img-fluid intro-self"></div>
+          <div class="d-flex justify-content-center align-items-center" style="flex-direction: column" v-if="!isMobile()">
+            <button class="social" type="button" title="Linkedin">
+              <a href="https://www.linkedin.com/in/sagar-sutar-b3281a179/"> <i class="fab fa-linkedin-in fa-lg"></i></a>
+            </button>
+            <button class="social" type="button" title="Instagram">
+              <a href="https://www.instagram.com/notsagarsutar/"> <i class="fab fa-instagram fa-lg"> </i></a>
+            </button>
+            <button class="social" type="button" title="Instagram">
+              <a href="https://github.com/sagarsanjaysutar/"> <i class="fab fa-github fa-lg"> </i></a>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -44,7 +55,7 @@ export default {
 }
 
 .intro-self {
-  background-image: url("../assets/img/Sagar6.png");
+  background-image: url("../assets/img/Sagar9.jpeg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -62,8 +73,7 @@ export default {
 .name {
   font-size: 5rem;
   font-weight: 600;
-  /* -webkit-text-stroke: 1px black;
-  -webkit-text-fill-color: white; */
+  color: #d3d3d3;
 }
 .pre-text {
   font-size: 2.5rem;
@@ -74,6 +84,17 @@ export default {
     position: absolute;
     bottom: 10px;
     left: 0px;
+  }
+  .name {
+    font-size: 3.5em;
+  }
+
+  .skill {
+    font-size: 1.4em;
+  }
+
+  .pre-text {
+    font-size: 1.4em;
   }
 }
 </style>
