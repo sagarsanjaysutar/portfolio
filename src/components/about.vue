@@ -66,7 +66,7 @@ export default {
 }
 
 .about-image {
-  background-image: url("../assets/img/Sagar10.jpeg");
+  background-image: url("/assets/img/self-2.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

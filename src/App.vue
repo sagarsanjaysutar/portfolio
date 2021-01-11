@@ -6,7 +6,6 @@
     <About />
     <Skills />
     <Contact />
-    <Footer />
   </div>
 </template>
 
@@ -17,7 +16,6 @@ import Projects from "./components/project";
 import About from "./components/about";
 import Skills from "./components/skills";
 import Contact from "./components/contact";
-import Footer from "./components/footer";
 
 export default {
   name: "App",
@@ -28,7 +26,6 @@ export default {
     About,
     Skills,
     Contact,
-    Footer,
   },
 };
 </script>
@@ -73,7 +70,7 @@ a {
   padding: 1.5rem;
   font-size: 60px;
   font-weight: 500;
-  background: url("./assets/img/hj.png");
+  background: url("/assets/img/hj.png");
   background-size: 150px 40px;
   background-repeat: no-repeat;
   background-position: left 30px bottom 20px;

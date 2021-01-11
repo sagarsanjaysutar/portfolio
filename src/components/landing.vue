@@ -55,7 +55,7 @@ export default {
 }
 
 .intro-self {
-  background-image: url("../assets/img/Sagar9.jpeg");
+  background-image: url("/assets/img/self-1.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

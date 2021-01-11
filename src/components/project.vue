@@ -24,11 +24,10 @@
             <p class="word-wrap">{{ project.desc }}</p>
 
             <div class="card-action mt-3">
-              <b-button variant="light">View code</b-button>
+              <b-button variant="light" :href="project.link">View code</b-button>
             </div>
           </div>
         </div>
-
         <span v-else>
           <div class="col-12">
             <div class="project-mobile-card">
@@ -52,7 +51,6 @@
     <span v-if="!isMobile()" class="project-background-text">WORK </span>
   </div>
 </template>
-
 <script>
 export default {
   name: "project",
@@ -66,13 +64,8 @@ export default {
           link: "https://github.com/sagarsanjaysutar/library-vue",
           type: "Web app",
           techUsed: "MEVN",
-          coverImage: "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/Work/Library/Library%202.png",
-          previewImages: [
-            "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/Work/Library/Library%201.png",
-            "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/Work/Library/Library%202.png",
-            "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/Work/Library/Library%203.png",
-            "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/Work/Library/Library%204.png",
-          ],
+          coverImage: "/assets/img/Work/Library/Library 2.webp",
+          previewImages: ["/assets/img/Work/Library/Library 1.webp", "/assets/img/Work/Library/Library 2.webp", "/assets/img/Work/Library/Library 3.webp", "/assets/img/Work/Library/Library 4.webp"],
         },
         {
           id: "p2",
@@ -81,24 +74,18 @@ export default {
           link: "https://github.com/sagarsanjaysutar/SpotKar",
           type: "Web app",
           techUsed: "OpenCV",
-          coverImage: "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/Work/Parking/Parking%202.webp",
-          previewImages: [
-            "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/Work/Parking/Parking%201.webp",
-            "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/Work/Parking/Parking%202.webp",
-          ],
+          coverImage: "/assets/img/Work/Parking/Parking 2.webp",
+          previewImages: ["/assets/img/Work/Parking/Parking 1.webp", "/assets/img/Work/Parking/Parking 2.webp"],
         },
         {
           id: "p3",
           name: "Droid Stack",
           desc: "An android app with features like fragments, recycler view,etc.",
-          link: "",
+          link: "https://github.com/sagarsanjaysutar/droid-stack",
           type: "Android app",
           techUsed: "Android",
-          coverImage: "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/Work/Droid%20Stack/app%201.jpg",
-          previewImages: [
-            "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/Work/Droid%20Stack/Droid%201.png",
-            "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/Work/Droid%20Stack/Droid%202.png",
-          ],
+          coverImage: "/assets/img/Work/Droid Stack/app 1.jpg",
+          previewImages: ["/assets/img/Work/Droid Stack/Droid 1.webp", "/assets/img/Work/Droid Stack/Droid 2.webp"],
         },
       ],
     };

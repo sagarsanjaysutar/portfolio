@@ -11,9 +11,9 @@
       </b-navbar-nav>
       <b-navbar-nav class="ml-auto">
         <b-nav-item-dropdown text="v4" right>
-          <b-dropdown-item><a href="../pages/v1.html">v1</a></b-dropdown-item>
-          <b-dropdown-item><a href="../pages/v2.html">v2</a></b-dropdown-item>
-          <b-dropdown-item><a href="../pages/v3.html">v3</a></b-dropdown-item>
+          <b-dropdown-item>v1</b-dropdown-item>
+          <b-dropdown-item>v2</b-dropdown-item>
+          <b-dropdown-item>v3</b-dropdown-item>
         </b-nav-item-dropdown>
       </b-navbar-nav>
     </b-collapse>

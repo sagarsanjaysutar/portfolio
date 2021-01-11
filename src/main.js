@@ -8,6 +8,7 @@ import App from "./App.vue";
 import VueAnimate from "vue-animate-scroll";
 
 Vue.config.productionTip = false;
+
 Vue.use(VueAnimate);
 Vue.use(BootstrapVue);
 Vue.use(BootstrapVueIcons);

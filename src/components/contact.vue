@@ -9,7 +9,7 @@
         </div>
       </div>
 
-      <div class="row pt-3">
+      <div class="row p-3">
         <div class="col-12 text-center">
           <div class="d-flex justify-content-center align-items-center">
             <button class="social" type="button" title="Linkedin">
