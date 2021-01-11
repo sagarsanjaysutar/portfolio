@@ -31,7 +31,7 @@
           </div>
           Made with <i class="far fa-heart"></i> by Sagar Sutar.
           <br />
-          <small style="color:#d3d3d3; ">Powered by Vue js. Picture courtesy <a href="instagram.com/rikengothi/">Riken Gothi.</a></small>
+          <small style="color:#d3d3d3; ">Powered by Vue js. Picture courtesy <a href="https://www.instagram.com/rikengothi/">Riken Gothi.</a></small>
         </div>
       </div>
     </div>

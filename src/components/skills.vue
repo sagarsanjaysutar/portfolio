@@ -10,7 +10,6 @@
             <div class="card-body">
               <h4 class="card-title">{{ skill.name }}</h4>
               <div class="card-subtitle ">
-                <span class="ml-4"></span>
                 {{ skill.desc }}
               </div>
               <div class="card-actions">

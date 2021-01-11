@@ -41,7 +41,7 @@ body {
   padding: 0px;
   font-family: "Poppins", sans-serif !important;
   font-display: swap;
-  cursor: pointer;
+  cursor: default;
 }
 
 a {
