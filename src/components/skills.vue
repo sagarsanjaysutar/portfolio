@@ -36,7 +36,7 @@ export default {
           name: "Web Development",
           desc: "I've worked on mutiple project based on the MEVN stack i.e Mongo, Express, Vue and Node JS \
           along side with Vuetify & Bootstrap. Infact this website is made using Vuejs.",
-          background: "https://raw.githubusercontent.com/sagarsanjaysutar/portfolio-vue/master/src/assets/img/bg/random.webp",
+          background: "/assets/img/bg/random.webp",
           icons: [
             {
               name: "Mongo DB",
