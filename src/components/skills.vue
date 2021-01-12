@@ -34,7 +34,7 @@ export default {
       skills: [
         {
           name: "Web Development",
-          desc: "I've worked on mutiple project based on the MEVN stack i.e Mongo, Express, Vue and Node JS \
+          desc: "I've worked on multiple project based on the MEVN stack i.e Mongo, Express, Vue and Node JS \
           along side with Vuetify & Bootstrap. Infact this website is made using Vuejs.",
           background: "/assets/img/bg/random.webp",
           icons: [
